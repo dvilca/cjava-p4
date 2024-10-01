@@ -1,0 +1,72 @@
+<div class="container-fluid mt-4">
+    <div class="card">
+        <div class="card-header text-white bg-primary text-center">
+            REGISTRAR MATRICULA
+        </div>
+        <form id="quickForm" action="pSocioRegistrarRequest.htm" method="post">
+            <div class="card-body">
+                <h5>Datos</h5>
+                <hr>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="textId">Id </label>
+                            <input type="number" class="form-control" id="textId" name="textId" placeholder="Nombre">
+                        </div>
+                    </div>
+                    <div class="col-md-3">                                
+                        <div class="form-group">
+                            <label for="textNombre">Nombres </label>
+                            <input type="text" class="form-control" id="textNombre" name="textNombre" placeholder="Nombre">
+                        </div>                               
+                    </div>
+                    <div class="col-md-3">                                
+                        <div class="form-group">
+                            <label for="textApellidos">Apellidos </label>
+                            <input type="text" class="form-control" id="textApellidos" name="textApellidos" placeholder="Apellido">
+                        </div>                               
+                    </div>
+                    <div class="col-md-3">                                
+                        <div class="form-group">
+                            <label for="textFecha">Fecha Nacimiento </label>
+                            <input type="text" class="form-control" id="textFecha" name="textFecha" placeholder="Fecha">
+                        </div>                               
+                    </div>    
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="textDireccion">Direccion</label>
+                            <input type="number" class="form-control" id="textDireccion" name="textDireccion" placeholder="Direccion">
+                        </div>  
+                    </div>                
+                    <div class="col-md-3">                         
+                        <div class="form-group">
+                            <label for="textEmail">Email </label>
+                            <input type="email" class="form-control" id="textEmail" name="textEmail" placeholder="Email">
+                        </div>
+                    </div>   
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="textTelefono">Teléfono</label>
+                            <input type="number" class="form-control" id="textTelefono" placeholder="Teléfono">
+                        </div>  
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="textCurso">Curso</label>
+                            <select id="textCurso" name="textCurso" class="custom-select">
+                                <option selected>Seleccionar curso</option>
+                                <option *ngFor="let curso of cursos" [value]="curso.id">{{ curso.nombre }}</option>                     
+                              </select>
+                        </div>  
+                    </div>             
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <div class="row justify-content-center">
+                    <button type="button" class="btn btn-primary">Registrar</button>
+                </div>                
+            </div>
+        </form>                                            
+    </div>                           
+</div>

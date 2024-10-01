@@ -1,0 +1,72 @@
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+      <div class="card">
+        <div class="card-header text-center">  
+          Tarjeta de crédito o débito
+        </div>
+        <div class="card-body">
+          <form action="" method="POST" id="payment-form">                               
+           
+              <div class="text-center">
+                <img src="assets/Image20240506201857.jpg" class="rounded" alt="..." width="250">
+              </div>    
+              <div class="row">                                                   
+                <div class="col-md-12">                
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                        </div>                
+                        <input type="text" class="form-control" placeholder="Como aparece en la tarjeta" autocomplete="off" value="">
+                    </div>               
+                </div>
+                <div class="col-md-12 mt-2">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-credit-card"></i></span>
+                        </div>                
+                        <input type="text" id="card_number" class="form-control" placeholder="Número de la Tarjeta" autocomplete="off" data-openpay-card="card_number" onkeypress="return EsNumero(event);" onkeydown="validClassCreditCard()" onkeyup="validarTarjeta(this.value);" maxlength="16">
+                    </div>                                                                                           
+                </div>
+
+                <div class="col-md-6 mt-2">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                        </div>                
+                        <input type="text" class="form-control input-sm" placeholder="Mes" id="expiration_month"  maxlength="2" >
+                    </div>                                                                                           
+                </div>
+
+                <div class="col-md-6 mt-2">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                        </div>                
+                        <input type="text" class="form-control input-sm " placeholder="Año" id="expiration_year" maxlength="2" >
+                    </div>                                                                                           
+                </div>
+                <div class="col-md-6 mt-2">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-credit-card"></i></span>
+                        </div>                
+                        <input type="text" class="form-control" placeholder="3 dígitos" autocomplete="off" id="cvv2" maxlength="4" >
+                    </div>                                                                                           
+                </div>
+            </div>
+                <div class="openpay" style="margin: 6px 10px">        
+                  <div class="shield">Tus pagos se realizan de forma segura con encriptación de 256 bits</div>
+                </div>
+                <div class="row justify-content-center">
+                  <button type="button" class="btn btn-primary">PAGAR</button>
+                </div>
+                <div class="row justify-content-center">
+                    <img src="assets/Medios_pago_op.png" width="200"> 
+                </div>         
+        </form>
+        </div>                                                    
+      </div>
+    </div>
+    </div>
+  </div>

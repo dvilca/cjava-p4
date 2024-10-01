@@ -1,0 +1,30 @@
+<div class="container-fluid mt-4">   
+<div class="card">
+    <div class="card-header text-white bg-primary">                                        
+        Lista de cursos      
+        <button type="button" class="btn btn-dark mx-4">Registrar nuevo</button>                                                       
+    </div>
+    <div class="card-body">                                          
+        <table id="tbtResultado" class="table table-bordered table-sm">
+            <thead>
+                <tr>   
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Horas</th>
+                    <th>Credito</th>                                               
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <tbody>     
+                <tr *ngFor="let curso of cursos">
+                    <td>{{curso.id}}</td>
+                    <td>{{curso.nombre}}</td>
+                    <td>{{curso.horas}}</td>
+                    <td>{{curso.creditos}}</td>
+                    <td>{{curso.categoria}}</td>
+                </tr>
+            </tbody>
+        </table>  
+    </div>                      
+</div> 
+</div>      

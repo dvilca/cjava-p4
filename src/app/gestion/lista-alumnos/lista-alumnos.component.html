@@ -1,0 +1,34 @@
+<div class="container-fluid mt-4">   
+    <div class="card">
+        <div class="card-header text-white bg-primary">                                        
+            Lista de Alumnos      
+            <button type="button" class="btn btn-dark mx-4">Registrar nuevo</button>                                                       
+        </div>
+        <div class="card-body">                                          
+            <table id="tbtResultado" class="table table-bordered table-sm">
+                <thead>
+                    <tr>   
+                        <th>Id</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Fecha nacimiento</th>                                               
+                        <th>Direccion</th>
+                        <th>Correo</th>
+                        <th>Telefono</th>
+                    </tr>
+                </thead>
+                <tbody>     
+                    <tr *ngFor="let alumno of alumnos">
+                        <td>{{alumno.id}}</td>
+                        <td>{{alumno.nombres}}</td>
+                        <td>{{alumno.apellidos}}</td>
+                        <td>{{alumno.fechaNacimiento}}</td>
+                        <td>{{alumno.direccion}}</td>
+                        <td>{{alumno.correo}}</td>
+                        <td>{{alumno.telefono}}</td>
+                    </tr>
+                </tbody>
+            </table>  
+        </div>                      
+    </div> 
+    </div>      
